@@ -1,14 +1,14 @@
 // Crear un array vacío llamado 'toDoItems'
 // Tu codigo acá:
 
-
+var toDoItems = []; //
 // En la página 'index.html' hay un elemento span cuyo texto es 'Aplicación creada por:'.
 // Usando querySelector seleccionar dicho span por su id ('createdBy') y luego usando innerHTML
 // agregar tu nombre al final del texto actual. Ej: 'Aplicación creada por Franco'
 // Tu código acá:
 
 
-
+ document.getElementById('createdBy').innerHTML='Aplicación creada por Alejandro Téllez Aguilar'
 // Crear una clase denominada 'ToDo' cuyo constructor debe recibir un único parámetro del tipo string
 // con el nombre 'description' que será justamente la descripción del ToDo.
 // Agregar dos propiedades a la clase:
@@ -16,9 +16,12 @@
 // 2) 'complete'    : debe setearse en false
 // Ayuda: usar 'this' en el constructor
 
-function ToDo () {
+function ToDo (desc) {
   // Tu código acá:
-
+   this.description = desc;
+   this.complete = false;
+   
+  
 }
 
 
@@ -27,7 +30,10 @@ function ToDo () {
 // Debe setear el atributo 'complete' del ToDo en true
 
 // Tu código acá:
+ToDo.prototype.completeToDo = function (){
+  this.complete = true;
 
+}
 
 
 // Agregar dos parámetros a la función 'buildToDo':
@@ -50,8 +56,13 @@ function ToDo () {
 
 function buildToDo(todo, index) {
   // Tu código acá:
-
+  if (todo.desc === null) return undefined
+     toDoItems.push('<div class=>'+ ToDo.desc)
+  
+     return todo.getElementsByClassName 
 }
+
+
 
 // La función 'buildToDos' debe crear un array de objetos toDo y devolverlo
 // Recibirá como parámetro un array de objetos ToDo
@@ -60,9 +71,15 @@ function buildToDo(todo, index) {
 
 function buildToDos(toDos) {
   // Tu código acá:
-
+  var toDosRespuesta = toDos.map(function(toDoItems){
+    return toDoItems} )
+    
 }
 
+function addToDo() {
+  // Tu código acá:
+
+}
 
 // La función 'displayToDos' se va a encargar de que se vean los toDo's en pantalla
 //  1) Seleccionr el elemento cuyo id es 'toDoContainer' y almacenarlo en una variable denominada 'toDoContainer'
@@ -88,10 +105,7 @@ function displayToDos() {
 //  3) Setear el valor del input toDoInput como un string vacio ("") (Esto se realiza para que en la vista se borre lo que se encontraba escrito)
 //  4) Llamar a la función displayToDos para que se actualicen los toDos mostrados en pantalla
 
-function addToDo() {
-  // Tu código acá:
 
-}
 
 // Agregar un 'Event Listener' para que cada vez que el botón 'AGREGAR' sea clickeado
 // se ejecute la función 'addToDo'
