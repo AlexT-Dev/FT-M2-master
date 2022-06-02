@@ -59,23 +59,37 @@ ToDo.prototype.completeToDo = function (){ //Agregar completeToDo al prototipo d
 
 
 function buildToDo(todo, index) {
+
+  //Para EXTRA
+  var checkbx = document.createElement('input') //a
+  checkbx.setAttribute('id',index);             //b    
+  checkbx.setAttribute('type','checkbox')       //a
+  checkbx.addEventListener('click', completeToDo)       //c
+  checkbx.setAttribute("class",'completeCheckbox')      //d
+
+
   // Tu código acá:
   var toDoShell = document.createElement('div');  // 1
   toDoShell.setAttribute("class",'toDoShell')     // 2 toDoShell.className = 'toDoShell'
-
+  
    var toDoText = document.createElement('span'); // 3
    toDoText.innerHTML = todo.description          // 4 
-   toDoText.setAttribute('id',index);             // 5 toDoText.id = index
+   // Para extra toDoText.setAttribute('id',index);             // 5 toDoText.id = index
+   
+  // if(todo.complete){                             // 6
+  //   toDoText.setAttribute('class','completeText')
+  // }
 
-   if(todo.complete){                             // 6
-     toDoText.setAttribute('class','completeText')
-   }
-
+    if(todo.complete){                             // e     toDoText.setAttribute('class','completeText')
+      checkbx.setAttribute('class','checked')
+    }
+    
+    
   //  Viene de function completeToDo(event)
  //   3) En la función 'buildToDo' agregar un 'click' event listener al elemento 'toDoText', pasándole
  //  esta función como callback
-   toDoText.addEventListener('click', completeToDo)
-   toDoShell.appendChild(toDoText);              //7
+ // Para Extra toDoText.addEventListener('click', completeToDo)
+   toDoShell.appendChild(checkbx);              //7
    return toDoShell  
 }
 
