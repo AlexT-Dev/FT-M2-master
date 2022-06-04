@@ -3,7 +3,10 @@
 .home {
 
   .intro {
-
+    img {
+      margin: 8px 0px;
+      border-radius: 20px;
+    }
     h2 {
       padding: 15px;
     }
@@ -57,7 +60,15 @@
         margin-bottom: 26px;
       }
 
-      .btn {
+      .btn {  //PArte de la homework
+        .register(@btn-bg-color, fit-content);
+        cursor: pointer;
+        transition: background-color 0.25s;
+
+        &:hover { 
+          background-color: @shuttle-gray;
+        }
+
       }
     }
 
@@ -72,4 +83,43 @@
       }
     }
   }
+}
+
+@media @phone {
+  .home {
+    .intro {
+      @margin: 8px;
+      img {
+        width:100%;
+        border-radius: @margin;
+      }
+    }
+    
+    .music-images {
+      img {
+        width: 100%;
+      }
+      .tecnologia,
+      .ondas {
+        display: none;
+      }
+    }
+    .actual{
+      padding: 8px;
+      margin: 0;
+      flex-direction: column-reverse;
+      .actual-img,
+      .actual-text {
+        width: 100%;
+        margin: 0;
+        .btn{
+          .register(@btn-bg-color, auto);
+          text-align: center;
+          padding: 14px 0px;
+        }
+      }
+      
+    }
+  }
+  
 }
