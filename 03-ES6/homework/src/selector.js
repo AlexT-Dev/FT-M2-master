@@ -15,7 +15,7 @@ var traverseDomAndCollectElements = function(matchFunc, startEl = document.body)
 
   for (let i = 0; i < startEl.children.length; i++) {
     let resultado = traverseDomAndCollectElements(matchFunc, startEl.children[i])
-    //concatena
+    //concatena con spread oparator
     resultSet = [...resultSet, ...resultado]
   }
   
