@@ -1,9 +1,10 @@
-(function () {
 
-  window.EventEmitter = EventEmitter;
+  //Se comenta para exportar el modulo
+  // window.EventEmitter = EventEmitter;  //Está exponiendo una variable global
 
   // our EventEmitter constructor function
-  function EventEmitter () {
+  // Solo con module. export function EventEmitter () {
+   export default function EventEmitter () { //sin export 
     this.subscribers = {};
   }
 
@@ -43,4 +44,4 @@
 
   };
 
-})();
+// module.exports = EventEmitter; //Se comenta si no de usa el default, linea 6

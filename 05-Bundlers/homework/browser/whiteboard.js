@@ -1,10 +1,14 @@
-(function () {
 
-  window.whiteboard = new window.EventEmitter();
+  // Se comenta para exportarlo como módulo
+
+ // window.whiteboard = new window.EventEmitter();  //Está usando el módulo event-emitter y exponiendo la variable Whiteboard como global
 
   // Ultimately, the color of our stroke;
   var color;
-
+  // Así cuando no se usa export default, linea 7 de event-emitter.js var eEmiter = require('./event-emitter.js');
+  import eEmiter from './event-emitter.js';  
+  var whiteboard = new eEmiter(); // las dos lineas pueden quedar en una export var whiteboard = new eEmiter();
+  export default whiteboard;
   // The color selection elements on the DOM.
   var colorElements = [].slice.call(document.querySelectorAll('.marker'));
 
@@ -113,4 +117,4 @@
 
   };
 
-})();
+  //module.exports = whiteboard; porque se exporta en la linea 11
