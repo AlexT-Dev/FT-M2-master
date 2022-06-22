@@ -8,7 +8,7 @@ import data, { Cairns } from './data.js';
 function App() {
   return (
     <div className="App">
-      <div>
+      {/* {<div>  //Para ejemplo del uso de Carins como export s
         <Card
           max={Cairns.main.temp_max}
           min={Cairns.main.temp_min}
@@ -17,7 +17,7 @@ function App() {
           onClose={() => alert(Cairns.name)}
         />
       </div>
-      <hr />
+      <hr />} */}
       <div>
         <Cards
           cities={data}
