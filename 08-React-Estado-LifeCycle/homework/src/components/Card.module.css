@@ -1,0 +1,61 @@
+.tituloCard{
+    color: blue;
+}
+
+.colorData{
+    font-weight: bold;
+}
+
+.container{
+    width: 250px;
+    border: 2px solid gray;
+    border-radius: 15px;
+    background-color: antiquewhite;
+    text-align: center;
+    
+    
+}
+
+.columElements{
+    float: left;
+    width: 33%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+   
+    
+}
+
+.btnClose{
+    float: right;
+    background-color: burlywood;
+    color: black;
+    border-radius: 3px;
+    border-color: burlywood;
+    margin: 10px;
+
+}
+
+.gridElements {
+     background-color: rgba(21, 127, 208, 0.658);
+     padding: 20px;
+      
+  
+  }
+
+  .divData{
+    padding: 1px;
+    
+    /* border-width: .5px;
+    border-color: black;
+    border-style: solid; */
+    
+  }
