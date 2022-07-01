@@ -82,6 +82,12 @@ function Nav({onSearch}) {
         <SearchBar
           onSearch={onSearch}
         />
+      <Link to='/about'>
+        <span>About</span>
+      </Link>
+        <SearchBar
+          onSearch={onSearch}
+        />  
     </nav>
   );
 };
