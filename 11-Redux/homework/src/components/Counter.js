@@ -22,11 +22,11 @@ class Counter extends Component {
         return (
             <p>
                 Clickeado: {this.props.count} veces
-                <button onClick={() => {increment}}>
-                    + {/* Incremeta */}
+                <button onClick={() => {this.props.increment}}>
+                    + {/*incrementa*/}
                 </button>
-                <button onClick={() => {decrement }}>
-                    -  {/* Decrementa */}
+                <button onClick={() => {this.props.decrement }}>
+                    -  {/*decrementa*/}
                 </button>
                  {/* Si quieres hacer los extra credit puede descomentar las lineas de abajo */}
                 <button onClick={this.incrementIfOdd}>
